@@ -88,7 +88,7 @@ export default function Locations() {
   const [currentMapUrl, setCurrentMapUrl] = React.useState("");
   const [currentLocation, setCurrentLocation] = React.useState("");
 
-  const openMap = (mapUrl, locationName) => {
+  const openMap = (mapUrl: React.SetStateAction<string>, locationName: React.SetStateAction<string>) => {
     setCurrentMapUrl(mapUrl);
     setCurrentLocation(locationName);
     setShowMap(true);
@@ -209,7 +209,6 @@ export default function Locations() {
                 width="100%" 
                 height="400" 
                 style={{ border: 0 }} 
-                allowFullScreen="" 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
                 title={`Map for ${currentLocation}`}
